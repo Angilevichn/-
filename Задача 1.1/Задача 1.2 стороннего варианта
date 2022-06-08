@@ -1,9 +1,0 @@
-using System;
-{
-Console.Write("Введите координаты точки A: ");
-double x = Convert.ToDouble(Console.ReadLine());
-double y = Convert.ToDouble(Console.ReadLine());
-double arctan = Math.Atan(y / x);
-double result = arctan * 180 / 3.141592653;
-Console.WriteLine(result);
-}
