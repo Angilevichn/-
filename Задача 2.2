@@ -1,0 +1,44 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        int n, k, f, t, k2;
+        Console.WriteLine("Введите максимальное число, которое можно загадать");
+        n = int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите максимальное кол-во попыток");
+        k = int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите число");
+        f = int.Parse(Console.ReadLine());
+        k2 = 1;
+        Random rand = new Random();
+        t = rand.Next(1, n);
+        while (k >= k2)
+        {
+            if (t > f)
+            {
+                Console.WriteLine("Больше");
+            }
+            if (t < f)
+            {
+                Console.WriteLine("Меньше");
+            }
+            if (t == f)
+            {
+                Console.WriteLine("Вы угадали!");
+                break;
+            }
+            Console.WriteLine("Введите число");
+            f = int.Parse(Console.ReadLine());
+            k2 += 1;
+        }
+        if (k2 > k)
+        {
+            Console.WriteLine("Вы не угадали");
+        }
+    }
+}
