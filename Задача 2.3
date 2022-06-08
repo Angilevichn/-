@@ -1,0 +1,44 @@
+using System;
+namespace Currently
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, n, j, t, o;
+            Console.WriteLine("Введите кол-во чисел в массиве");
+            n = int.Parse(Console.ReadLine());
+            int[] p = new int[n];
+            Random r = new Random();
+            for (i = 0; i < n; i++)
+            {
+                p[i] = r.Next(1, 101);
+                Console.Write(p[i]);
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            for (i = 0; i < p.Length; i++)
+            {
+                j = r.Next(0, p.Length);
+                if (j != i)
+                {
+                    j = j;
+                }
+                else
+                {
+                    j += 1;
+                }
+
+                t = p[i];
+                p[i] = p[j];
+                p[j] = t;
+            }
+            for (i = 0; i < p.Length; i++)
+            {
+                Console.Write(p[i]);
+                Console.Write(" ");
+            }
+        }
+    }
+}
