@@ -1,0 +1,30 @@
+using System;
+namespace Currently
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, i;
+            Console.WriteLine("Введите a ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите b ");
+            b = int.Parse(Console.ReadLine());
+            Program random = new Program();
+            for (i = 0; i < 100; i++)
+            {
+                Console.Write(random.Rand(a, b));
+            }
+        }
+        public int Rand(int a, int b)
+        {
+            int i, k;
+            Random rand = new Random();
+            for (i = 0; i < 100; i++)
+            {
+                k = rand.Next(a, b);
+            }
+            return k = rand.Next(a, b);
+        }
+    }
+}
