@@ -1,0 +1,25 @@
+using System;
+namespace Currently
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j;
+            double k, k1, p;
+            k = double.Parse(Console.ReadLine());
+            for (i = 1; i < 500; i++)
+            {
+                for (j = 1; j < 500; j++)
+                {
+                    k1 = (i * j) / 2;
+                    p = Math.Sqrt(Math.Pow(i, 2) + Math.Pow(j, 2));
+                    if (p == Math.Truncate(p) && (k1 < k))
+                    {
+                        Console.WriteLine($"a={i}, b={j}, c={p}, s={k1}");
+                    }
+                }
+            }
+        }
+    }
+}
