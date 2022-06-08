@@ -1,0 +1,73 @@
+using System;
+{
+    Console.Write("Введите координаты x0 и y0: ");
+    double x0 = Convert.ToDouble(Console.ReadLine());
+    double y0 = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Введите координаты xn и yn: ");
+    double xn = Convert.ToDouble(Console.ReadLine());
+    double yn = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Введите координаты xk и yk: ");
+    double xk = Convert.ToDouble(Console.ReadLine());
+    double yk = Convert.ToDouble(Console.ReadLine());
+    string nPos;
+    string kPos;
+    if (xn > x0 && yn > y0)
+    {
+        nPos = "1ой";
+    }
+    else
+    {
+        if (xn < x0 && yn > y0)
+        {
+            nPos = "2ой";
+        }
+        else
+        {
+            if (xn < x0 && yn < y0)
+            {
+                nPos = "3ей";
+            }
+            else
+            {
+                if (xn > x0 && yn < y0)
+                {
+                    nPos = "4ой";
+                }
+                else
+                {
+                    nPos = "никакой";
+                }
+            }
+        }
+    }
+    if (xk > x0 && yk > y0)
+    {
+        kPos = "1ой";
+    }
+    else
+    {
+        if (xk < x0 && yk > y0)
+        {
+            kPos = "2ой";
+        }
+        else
+        {
+            if (xk < x0 && yk < y0)
+            {
+                kPos = "3ей";
+            }
+            else
+            {
+                if (xk > x0 && yk < y0)
+                {
+                    kPos = "4ой";
+                }
+                else
+                {
+                    kPos = "никакой";
+                }
+            }
+        }
+    }
+    Console.WriteLine($"Начальная точка находится в {nPos} четверти, а конечная в {kPos}");
+}
