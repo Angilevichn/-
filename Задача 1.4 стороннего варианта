@@ -1,0 +1,10 @@
+{
+    Console.Write("Введите число: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact *= i;
+    }
+    Console.WriteLine($"Факториал числа равен {fact}.");
+}
